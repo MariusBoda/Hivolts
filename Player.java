@@ -79,11 +79,7 @@ public class Player {
 			while (jump) {
 				int newCol1 = random(10,1);
 				int newRow1 = random(10,1);
-				if (Controller.board[newCol1][newRow1] == 'f') {
-					newCol1 = random(10,1);
-					newRow1 = random(10,1); 
-				}
-				else if (Controller.board[newCol1][newRow1] != 'f') {
+				if (Controller.board[newRow1][newCol1] != 'f') {
 					newCol = newCol1;
 					newRow = newRow1;
 					jump = false;
@@ -91,6 +87,7 @@ public class Player {
 			}
 
 		}
+				
 
 		if (board[newRow][newCol] != 'v' && board[newRow][newCol] != 'c') {
 			isAlive = false;

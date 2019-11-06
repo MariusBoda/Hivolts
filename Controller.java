@@ -23,6 +23,7 @@ public class Controller {
         }
     }
 
+    //everytime player loses/wins new game is made
     public void regenerateGame() {
         moves = 0;
 
