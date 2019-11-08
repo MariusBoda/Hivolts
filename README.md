@@ -53,6 +53,7 @@ With the help of Brian, we were able to get a nice 2D array board that worked we
 With the help of Jacob, we were able to finish mho movement and character jumping.
 
 Links: 
+
 https://www.youtube.com/watch?v=d3QbptJRln4 
 
 https://www.youtube.com/watch?v=jUdIAgJ7JKo 
