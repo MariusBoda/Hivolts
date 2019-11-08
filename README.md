@@ -1,4 +1,6 @@
-Group Members: Brian Lee, Jacob Hung, Marius Boda
+AP CS A Hivolts Group Project
+
+Brian Lee, Jacob Hung, Marius Boda
 
 Introduction:
 
