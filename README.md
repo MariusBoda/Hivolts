@@ -1,6 +1,7 @@
 Group Members: Brian Lee, Jacob Hung, Marius Boda
 
 Introduction:
+
 This project is called Hivolts. Assigned to us by Mr. Kuszmaul for AP Computer Science. 
 Group members and authors of the code are Brian Lee, Jacob Hung, and Marius Boda. 
 The specifications for the project given can be found on Paleyontology.com. 
@@ -10,6 +11,7 @@ As a result, our group member Brian started on a new version of the project wher
 Once again as the project evolved we used our knowledge from the cow project and then former Hivolts version we had started with to improve our new version of Hivolts. 
 
 Fulfillment:
+
 Our Hivolts game is able to be run and has all the correct conditions. Mho movement is close to perfect and our player movement is flawless. 
 We were able to meet all the criteria that were stated on Paleyontology.com. All randomization can be improved to make it true randomization. 
 In the future, we could acquire some help to improve our methods and make randomization better. 
@@ -22,6 +24,7 @@ We can fix it by implementing a more complex algorithm that creates numbers whil
 We also do not provide information when you die so it is hard to determine why you died as our game automatically changes to the “you lose” screen.
 
 Overview of Code:
+
 In the class “Game.java”, we have our main method that runs the code. 
 The class “Controller.java” contains the method that generates the game. 
 It also uses a 2D array that stores all of the game information. 
@@ -34,12 +37,14 @@ It also has methods that show a win or lose screen, and regenerates the board wh
 
 
 Major Challenges: 
+
 Throughout the project, we encountered many challenges. 
 The first challenge that we faced was applying what we learned about lists/arrays, and print, and making the program paint our board on the JFrame. 
 Another challenge that we faced was that even though our initial code worked, it was not the most efficient and legible, which meant that we needed to divide all the code into different classes and methods that are as small as possible. 
 We also had challenges making the graphics for the board. 
 
 Acknowledgments: 
+
 We’ve learned more about lists/arrays and JFrame through a YouTube video series. 
 We’ve also learned about JFrame and JPanel on YouTube. 
 With the help of Marius, we were able to create nice looking graphics for the fences, mhos, and character.  
