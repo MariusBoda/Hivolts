@@ -43,27 +43,41 @@ public class Controller {
 
         // fences placement
         int amountCreated = 0;
+        int randy = 2;
+        int randx = 0;
         while (amountCreated < fencescount) {
             int rand1 = random(1, 10);
-            int rand2 = random(1, 10);
-
-            if (board[rand1][rand2] != 'f') {
+            randx =randx + rand1;
+            if (randx > 10) {
+            	randx = randx - 10;
+            	randy++;
+            }
+            if (randy>11) {
+            	randy=2;
+            }
+            if (board[randx+1][randy] != 'f') {
                 amountCreated++;
-
-                board[rand1][rand2] = 'f';
+                board[randx+1][randy] = 'f';
             }
         }
 
         // Mhos placement
+        randy = 2;
+        randx = 0;
         amountCreated = 0;
         while (amountCreated < mhoscount) {
             int rand1 = random(1, 10);
-            int rand2 = random(1, 10);
-
-            if (board[rand1][rand2] != 'f' && board[rand1][rand2] != 'e') {
+            randx =randx + rand1;
+            if (randx > 10) {
+            	randx = randx - 10;
+            	randy++;
+            }
+            if (randy>11) {
+            	randy=2;
+            }
+            if (board[randx+1][randy] != 'f' && board[randx+1][randy] != 'e') {
                 amountCreated++;
-
-                board[rand1][rand2] = 'e';
+                board[randx+1][randy] = 'e';
             }
         }
 
