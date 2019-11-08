@@ -23,7 +23,7 @@ Current Errors:
 
 Overall, our project had fewer errors than most, but there is one place that we can improve on given more time: 
 The random algorithm that we have calculates a random X position and a random Y position on the board, and keeps producing a random number until we get the desired point (X, Y) on the board. 
-This random method isn’t efficient since if the numbers that it generates are not completely random, the board will either generate the wrong numbers or have loop for a long time. 
+This random method isn’t efficient since if the numbers that it generates are not completely random, the board will either generate the wrong numbers or have loop for a long time. We have fixed it somewhat to where the game will not break if the random number generator produces the same number each time.
 We can fix it by implementing a more complex algorithm that creates numbers while taking the currently occupied positions into consideration (this idea was supplied by Kuszmaul). 
 We also do not provide information when you die so it is hard to determine why you died as our game automatically changes to the “you lose” screen.
 
