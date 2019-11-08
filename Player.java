@@ -60,7 +60,7 @@ public class Player {
 			newCol = playerCol + 1;
 			newRow = playerRow - 1;
 
-		}
+		} //all below is simple player movement
 		if (move == 'a') {
 			newCol = playerCol - 1;
 			newRow = playerRow;
@@ -85,12 +85,20 @@ public class Player {
 			newCol = playerCol + 1;
 			newRow = playerRow + 1;
 		}
+		//jumping feature
 		if (move == 'j') {
 			boolean jump = true;
 			while (jump) {
-				int newCol1 = random(10,1);
-				int newRow1 = random(10,1);
-				if (Controller.board[newRow1][newCol1] != 'f') {
+				int newCol2 = random(1000,1);
+				int newRow2 = random(1000,1);
+				//our somewhat randomization attempt
+				newCol2 = newCol2 * 30;
+				newRow2 = newRow2 * 40;
+				newCol2 = newCol2 / 20;
+				newRow2 = newRow2 / 30;
+				int newCol1 = newCol2;
+				int newRow1 = newRow2;
+				if (newCol1 < 11 && newRow1 < 11 && Controller.board[newRow1][newCol1] != 'f') {
 					newCol = newCol1;
 					newRow = newRow1;
 					jump = false;
@@ -99,7 +107,9 @@ public class Player {
 
 		}
 				
-
+		
+		//if character is on a mho or fence 
+		//character is dead
 		if (board[newRow][newCol] != 'v' && board[newRow][newCol] != 'c') {
 			isAlive = false;
 			board[playerRow][playerCol] = 'v';
@@ -114,6 +124,7 @@ public class Player {
 		return board;
 	}
 
+	//prints the board
 	void printboard(char[][] board) {
 		//     System.out.println("from print board hello");
 		int boardlength = 12;
@@ -125,6 +136,7 @@ public class Player {
 
 	}
 
+	//a random method which creates a random number for us whenever we call this method
 	int random(int end, int start) {
 		int diff = end - start + 1;
 		return ((int) Math.floor(Math.random() * diff)) + start;
