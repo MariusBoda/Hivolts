@@ -46,7 +46,9 @@ With the help of Marius, we were able to create nice looking graphics for the fe
 
 Links: 
 https://www.youtube.com/watch?v=d3QbptJRln4 
+
 https://www.youtube.com/watch?v=jUdIAgJ7JKo 
+
 https://www.geeksforgeeks.org/switch-statement-in-java/ 
 
 Link to Public Github:
