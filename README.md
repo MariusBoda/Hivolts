@@ -17,6 +17,7 @@ We were able to meet all the criteria that were stated on Paleyontology.com. All
 In the future, we could acquire some help to improve our methods and make randomization better. 
 
 Current Errors: 
+
 Overall, our project had fewer errors than most, but there is one place that we can improve on given more time: 
 The random algorithm that we have calculates a random X position and a random Y position on the board, and keeps producing a random number until we get the desired point (X, Y) on the board. 
 This random method isn’t efficient since if the numbers that it generates are not completely random, the board will either generate the wrong numbers or have loop for a long time. 
