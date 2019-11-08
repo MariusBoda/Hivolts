@@ -15,20 +15,27 @@ public class Draw {
 
     Player player;
 
-    
+    //sets up variables from the other classes
     Draw(char[][] board, Player player, Controller controller) {
         this.board = board;
         this.player = player;
         this.controller = controller;
+        //this runs the method below
         setFrame();
 
+        //Work subclass is for the different states of the game
         Work p = board();
+        //p is object of the class work
+        //p is the board
         frame.add(p);
+        //adds object to the frame
 
+        //new object kc for type KeyChecker and takes from p, player, and controller
         KeyChecker kc = new KeyChecker(p, player, controller);
+        //setting up for the rest of the code
         p.addKeyListener(kc);
         frame.addKeyListener(kc);
-
+        //frame is visible
         frame.setVisible(true);
     }
 
@@ -40,7 +47,8 @@ public class Draw {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setResizable(true);
     }
-
+    
+    //returns board
     Work board() {
         return new Work(this.controller);
     }
@@ -50,8 +58,9 @@ public class Draw {
 class Work extends JPanel {
     char[][] board;
     Controller controller;
-
-    BufferedReader mho = null;
+    
+    //BufferedReader mho = null;
+    //different states of the game
 
     enum State {
         start,
@@ -59,9 +68,10 @@ class Work extends JPanel {
         lose,
         win
     }
-
+    //s = state.start
     State s;
 
+    //getting values from controller class
     public Work(Controller controller) {
         this.board = controller.board;
         this.controller = controller;
@@ -159,10 +169,12 @@ class Work extends JPanel {
     public void paintLose(Graphics g) {
     	Color orangeColor = new Color(255, 165, 0);
     	g.setColor(Color.black);
-    	g.fillRect(0, 0, 10000, 10000);
-    	g.setColor(orangeColor);
-        g.setFont(new Font("Comic Sans", Font.PLAIN, 20));
-        g.drawString("Game over, better luck next time", 400, 400);
+	g.fillRect(0, 0, 10000, 10000);
+	g.setColor(Color.orange);
+	g.setFont(new Font("Minecraft", Font.PLAIN, 150));
+	g.drawString("You Died", 200, 400);
+	g.setFont(new Font("Arial", Font.PLAIN, 40));
+	g.drawString("Press any key to play again", 300, 600);
     }
     
     //game won method
@@ -171,8 +183,10 @@ class Work extends JPanel {
     	g.setColor(Color.black);
     	g.fillRect(0, 0, 10000, 10000);
     	g.setColor(orangeColor);
-        g.setFont(new Font("Comic Sans", Font.PLAIN, 20));
-        g.drawString("You Win!!", 400, 400);
+        g.setFont(new Font("Comic Sans", Font.PLAIN, 150));
+        g.drawString("You Win!!", 200, 400);
+	g.setFont(new Font("Arial", Font.PLAIN, 40));
+	g.drawString("Press any key to play again", 300, 600);
     }
 
     @Override
@@ -198,13 +212,14 @@ class Work extends JPanel {
     }
 }
 
+//new class for movement
 class KeyChecker extends KeyAdapter {
     private final Player player;
     private final Controller controller;
     Work work;
 
     Set<Character> characters = new HashSet<>();
-
+    //takes work, player, and controller methods
     KeyChecker(Work work, Player player, Controller controller) {
         this.work = work;
         this.player = player;

@@ -12,12 +12,12 @@ public class Controller {
 
     int moves = 0; // moves done
     int mhosLeft = 12; // amount of mhos still in the game
-
+    //swing is a boolean for turns
     Controller(boolean swing) {
         this.swing = swing;
 
         regenerateGame();
-
+        //swing is used 
         if (swing) {
             swingUI = new Draw(board, player, this);
         }
@@ -33,6 +33,7 @@ public class Controller {
             }
         }
 
+        //makes outer fences
         for (int i = 0; i < 12; i++) {
             board[i][0] = 'f';
             board[i][11] = 'f';
