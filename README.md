@@ -49,6 +49,8 @@ Acknowledgments:
 We’ve learned more about lists/arrays and JFrame through a YouTube video series. 
 We’ve also learned about JFrame and JPanel on YouTube. 
 With the help of Marius, we were able to create nice looking graphics for the fences, mhos, and character.  
+With the help of Brian, we were able to get a nice 2D array board that worked well.
+With the help of Jacob, we were able to finish mho movement and character jumping.
 
 Links: 
 https://www.youtube.com/watch?v=d3QbptJRln4 
