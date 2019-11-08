@@ -83,14 +83,21 @@ public class Controller {
 
         // Character placement
         amountCreated = 0;
+        randy = 2;
+        randx = 0;
         while (amountCreated < 1) {
-            int rand1 = random(1, 10);
-            int rand2 = random(1, 10);
-
-            if (board[rand1][rand2] != 'f' && board[rand1][rand2] != 'e') {
+            int rand1 = random(5, 10);
+            randx =randx + (3 * rand1);
+            while (randx > 10) {
+            	randx = randx - 10;
+            	randy++;
+            }
+            if (randy>11) {
+            	randy=2;
+            }
+            if (board[randx+1][randy] != 'f' && board[randx+1][randy] != 'e') {
                 amountCreated++;
-
-                board[rand1][rand2] = 'c';
+                board[randx+1][randy] = 'c';
             }
         }
 
